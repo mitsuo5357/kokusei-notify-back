@@ -50,8 +50,10 @@ app.post('/subscribe', async (req, res) => {
 // ★ 通知送信時に「データベース」から購読情報を読み出すように変更
 app.post('/send-notification', async (req, res) => {
   try {
-    const { title, body } = req.body;
-    const payload = JSON.stringify({ title, body });
+　　// ↓リクエストからurlも受け取るようにする
+　　const { title, body, url } = req.body; 
+　　// ↓ペイロードにurlも追加する
+　　const payload = JSON.stringify({ title, body, url });
 
     // 'subscriptions'コレクションから全ての購読情報を取得
     const subscriptionsSnapshot = await db.collection('subscriptions').get();
