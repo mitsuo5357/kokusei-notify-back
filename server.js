@@ -26,7 +26,7 @@ const vapidKeys = {
   privateKey: 'j74GjYnqXuL4QAAB-Vd7xKo5Q_aIAsHJXFtbMHzQdbg'
 };
 webpush.setVapidDetails(
-  'mailto:your-email@example.com',
+  'mailto:census@city.miyakonojo.miyazaki.jp',
   vapidKeys.publicKey,
   vapidKeys.privateKey
 );
